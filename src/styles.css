@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+* {
+    --bs-body-bg: #272727;
+    --bs-body-color: #fff;
+    --bs-secondary: #323232;
+    --bs-primary: rgb(235, 23, 23);
+}
+
+.link-if,
+.btn-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.link-if:hover,
+.btn-link:hover {
+    color: var(--bs-primary);
+}
