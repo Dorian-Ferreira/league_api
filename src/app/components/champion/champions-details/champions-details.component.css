@@ -12,3 +12,18 @@
     border-radius: 1em;
     padding: 0.2em 0.8em;
 }
+
+.btn {
+    width: fit-content;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.spell {
+    width: 5em;
+    margin: 0 1em 0 1em;
+}
+
+.spell:hover {
+    filter: brightness(50%);
+}

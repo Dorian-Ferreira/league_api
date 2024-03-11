@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ImageLeague } from '../entity/image-league';
-import { ApiService } from '../service/api-service.service';
 
 @Injectable({
 	providedIn: 'root'
