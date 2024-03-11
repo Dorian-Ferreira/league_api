@@ -4,7 +4,7 @@ import { ChampionsDetailsComponent } from './components/champion/champions-detai
 import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
-    {path: '/', component: HomeComponent},
+    {path: '', component: HomeComponent},
     {path: 'champions', component: ChampionsComponent},
     {path: 'champions/:championID', component: ChampionsDetailsComponent},
 ];
