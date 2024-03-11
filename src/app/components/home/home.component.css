@@ -1,0 +1,13 @@
+.video {
+    width: 80%;
+    height: auto;
+}
+
+.logo {
+    width: auto;
+    height: 20em;
+}
+
+.text {
+    padding: 3em 10% 0 10%;
+}

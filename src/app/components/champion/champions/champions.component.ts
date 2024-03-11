@@ -13,17 +13,29 @@ import { CommonModule } from '@angular/common';
 })
 export class ChampionsComponent {
 
+  allChampions!:Array<Champion>;
   champions!:Array<Champion>;
   version!:string;
 
+  filter!:string;
+
   constructor(private apiService: ApiService) {
+    this.allChampions = new Array<Champion>;
     this.champions = new Array<Champion>;
     this.apiService.versions.latest().then(data => this.version = data);
 
     this.apiService.champion.all().then(data => {
       for(const champion in data.data) {
-        this.champions.push(data.data[champion]);
+        this.allChampions.push(data.data[champion]);
       }
     });
+
+    this.champions = this.allChampions;
+  }
+
+  onKey(event: any) {
+    this.champions = this.allChampions.filter((c) => c.name.toLowerCase().includes(event.target.value.toLowerCase())
+                                                || c.tags.filter((t) => t.toLowerCase().includes(event.target.value.toLowerCase())).length > 0
+                                              );
   }
 }

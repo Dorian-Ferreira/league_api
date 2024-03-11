@@ -1,5 +1,12 @@
 <div class="container">
-    <div class="row d-flex mb-5">
-        <app-champion-mini *ngFor="let champion of champions" [champion] = "champion" class="col-2 mt-5"></app-champion-mini>
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <input (keyup)="onKey($event)" class="input" placeholder="Yuumi, Support..."/>
+        </div>
     </div>
+
+    <div class="row d-flex">
+        <app-champion-mini *ngFor="let champion of champions" [champion] = "champion" class="col-lg-2 col-md-4 col-sm-4 mt-5"></app-champion-mini>
+    </div>
+
 </div>

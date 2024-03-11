@@ -1,10 +1,19 @@
-<div class="container">
-    <div class="row">
-        <div class="d-flex justify-content-center">
-            <a href="/" class="link-if me-5">Home</a>
-            <a href="/champion" class="link-if">Champions</a>
+<div class="row">
+    <div class="d-flex">
+        <a href="/" class="link-if ms-5">
+            <img class="logo" src="assets/League-of-Legends.png" alt="Home">
+        </a>
+        <div class="d-flex w-100">
+            <a href="/champions" class="link-if mt-4 ms-5">Champions</a>
         </div>
     </div>
 </div>
 
 <router-outlet />
+
+<div class="row my-5">
+    <div class="d-flex justify-content-center">
+        This website is made using data from the Official Riot Games API(<a href="https://developer.riotgames.com/docs/lol#data-dragon" class="link-if">available here</a>).
+        This was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.
+    </div>
+</div>

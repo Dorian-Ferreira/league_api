@@ -21,13 +21,9 @@ export class ChampionsDetailsComponent implements OnInit {
 
 	champion!: Champion;
 
-	get getChampionName() { return (this.champion) ? this.champion.name : null; }
-	get getChampionTitle() { return (this.champion) ? this.champion.title : null; }
-	get getChampionLore() { return (this.champion) ? this.champion.lore : null; }
-	get getChampionSkins() { return (this.champion) ? this.champion.skins : null; }
+	get fullImage() { return (this.champion) ? this.imageService.getSplashUrl(this.champion.id + "_" + this.champion.skins[0].num + ".jpg", "champion/splash") : null; }
 
-	get fullImage() { return (this.champion) ? this.imageService.getSplashUrl(this.champion.name + "_" + this.champion.skins[0].num + ".jpg", "champion/splash") : null; }
-	skinImage(skin: Skin | undefined) { return (this.champion && skin) ? this.imageService.getSplashUrl(this.champion.name + "_" + skin.num + ".jpg", "champion/splash") : null; }
+	skinImage(skin: Skin | undefined) { return (this.champion && skin) ? this.imageService.getSplashUrl(this.champion.id + "_" + skin.num + ".jpg", "champion/splash") : null; }
 
 	constructor(private apiService: ApiService, private imageService: ImageService, private activatedRoute: ActivatedRoute) {
 	}

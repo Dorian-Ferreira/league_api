@@ -19,3 +19,7 @@
 .btn-link:hover {
     color: var(--bs-primary);
 }
+
+.row {
+    margin: 0 0 0 0;
+}
