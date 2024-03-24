@@ -7,7 +7,7 @@
             <div class="my-3">{{ champion.lore }}</div>
             <div class="mb-3" *ngIf="champion.partype != '' && champion.partype != 'None'">Secondary Resource: {{ champion.partype }}</div>
             <div *ngFor="let tag of champion.tags">
-                <a class="link-if" href="/champions?search={{tag}}">{{ tag }}</a>
+                <a class="link-if" href="/league_api/champions?search={{tag}}">{{ tag }}</a>
             </div>
         </div>
     </div>
